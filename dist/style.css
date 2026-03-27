@@ -47,6 +47,10 @@ img {
   max-width: 100%;
 }
 
+.link {
+  color: #008f4f;
+}
+
 .header {
   background-color: #008f4f;
   border-bottom: 1px solid #ffffff;
@@ -265,6 +269,7 @@ img {
 .service__navigation {
   display: flex;
   gap: 20px;
+  overflow-x: auto;
 }
 .service__navigation > a {
   padding: 10px 20px;
@@ -281,7 +286,6 @@ img {
     font-size: 34px;
   }
   .service__navigation {
-    flex-wrap: wrap;
     gap: 10px;
   }
 }
@@ -529,6 +533,12 @@ img {
   line-height: 24px;
   font-weight: 700;
   border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+  .price-list > p {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
