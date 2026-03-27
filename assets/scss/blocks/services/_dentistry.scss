@@ -1,0 +1,69 @@
+@use "../../typography" as t;
+@use "../../colors" as c;
+
+.dentistry {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & > h3 {
+    @include t.section-heading;
+  }
+
+  &__map-wrapper,
+  &__addreses {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__map-wrapper {
+    align-items: stretch;
+  }
+
+  &__addreses {
+    flex-direction: column;
+    max-width: 376px;
+    width: 100%;
+
+    & > div {
+      background-color: #f1f3f9;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & > h5 {
+        @include t.body-text;
+        color: c.color("secondary-foreground");
+      }
+
+      & > p {
+        @include t.body-text-muted;
+      }
+    }
+  }
+
+  &__map {
+    flex: 1;
+    min-width: 0;
+
+    & > iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .dentistry {
+    &__map-wrapper {
+      flex-direction: column;
+    }
+
+    &__addreses {
+      max-width: none;
+    }
+  }
+}

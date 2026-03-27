@@ -1,0 +1,12 @@
+@use "../colors" as c;
+
+.contact {
+  &__trigger {
+    color: c.color("foreground-inverted");
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    gap: 12px;
+    text-decoration: underline;
+  }
+}

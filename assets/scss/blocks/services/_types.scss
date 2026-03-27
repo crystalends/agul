@@ -1,0 +1,68 @@
+@use "../../typography" as t;
+
+.types {
+  display: flex;
+  gap: 20px;
+
+  & > img {
+    width: 476px;
+    height: 318px;
+    object-fit: cover;
+    object-position: 0 -40px;
+    margin-top: auto;
+    border-radius: 10px;
+  }
+
+  &__about {
+    max-width: 674px;
+    width: 100%;
+
+    & > h3 {
+      @include t.section-heading;
+    }
+
+    & > p,
+    & > ul > li {
+      @include t.body-text-muted;
+    }
+
+    & > ul {
+      padding-left: 25px;
+
+      & > li {
+        text-indent: 0;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & > p,
+      & > ul > li {
+        font-weight: 700;
+      }
+
+      &-external {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .types {
+    flex-direction: column;
+
+    & > img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      margin-top: 0;
+      object-position: center;
+    }
+  }
+}

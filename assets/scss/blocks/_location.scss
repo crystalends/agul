@@ -1,0 +1,13 @@
+@use "../colors" as c;
+
+.location {
+  &__trigger {
+    display: flex;
+    align-items: center;
+    gap: 8.5px;
+    color: c.color("foreground-inverted");
+    font-weight: 700;
+    font-size: 15px;
+    padding: 3.08px 0;
+  }
+}

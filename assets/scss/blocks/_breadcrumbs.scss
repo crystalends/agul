@@ -1,0 +1,13 @@
+@use "../colors" as c;
+
+.breadcrumbs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  color: c.color("secondary-foreground");
+
+  & > * {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}

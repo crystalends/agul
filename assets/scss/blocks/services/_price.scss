@@ -1,0 +1,45 @@
+@use "../../typography" as t;
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & > h3 {
+    @include t.section-heading;
+  }
+
+  & > p {
+    @include t.body-text-muted;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    background-color: #f8f9fc;
+    padding: 10px 20px;
+    display: flex;
+    gap: 5px;
+    border-radius: 5px;
+    justify-content: space-between;
+
+    & > p,
+    & > span {
+      @include t.body-text-muted;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .price {
+    &__item {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+}

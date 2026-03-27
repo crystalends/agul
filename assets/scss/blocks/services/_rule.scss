@@ -1,0 +1,54 @@
+@use "../../typography" as t;
+
+.rule {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #f1f3f9;
+
+  &__icon-wrapper {
+    border: 1px solid #2a93c9;
+    border-radius: 65px;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__about {
+    & > h3 {
+      @include t.section-heading;
+    }
+
+    & > p,
+    & > ul > li {
+      @include t.body-text-muted;
+    }
+
+    & > ul {
+      padding-left: 25px;
+
+      & > li {
+        text-indent: 0;
+      }
+    }
+
+    &-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .rule {
+    gap: 20px;
+    padding: 24px;
+    flex-direction: column;
+  }
+}

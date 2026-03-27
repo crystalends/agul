@@ -1,0 +1,94 @@
+@use "../../colors" as c;
+@use "../../typography" as t;
+
+.service {
+  &__preview {
+    border-radius: 10px;
+    min-height: clamp(320px, 52vw, 525px);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.2) 61.06%
+      ),
+      url("/assets/images/8daa7831f4e1de25973d8dbd47a5fb2f424e415d.png");
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 847px;
+
+    & > h2 {
+      font-family: "Asap", sans-serif;
+      font-weight: 700;
+      letter-spacing: 3.5%;
+      font-size: 44px;
+    }
+
+    & > p {
+      @include t.body-text;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: c.color("foreground-inverted");
+      padding: 20px;
+
+      & > span {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 20px;
+
+    & > a {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid c.color("secondary-foreground");
+      color: c.color("secondary-foreground");
+      @include t.body-text;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .service {
+    &__about {
+      & > h2 {
+        font-size: 34px;
+      }
+    }
+
+    &__navigation {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .service {
+    &__about {
+      & > h2 {
+        font-size: 28px;
+      }
+    }
+  }
+}

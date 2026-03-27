@@ -1,0 +1,40 @@
+@use "../colors" as c;
+
+.header {
+  background-color: c.color("primary");
+  border-bottom: 1px solid c.color("foreground-inverted");
+
+  &__inner {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0px 14.42px 0px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__working-hours {
+    color: c.color("foreground-inverted");
+    opacity: 80%;
+    font-size: 11.7px;
+    line-height: 18.72px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    &__inner {
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    &__menu {
+      width: 100%;
+      gap: 6px;
+    }
+  }
+}

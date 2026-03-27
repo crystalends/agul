@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$colors: (
+  "primary": #008f4f,
+  "secondary": #f1f3f9,
+  "secondary-foreground": #868686,
+  "foreground-inverted": #ffffff,
+  "foreground": #000000,
+);
+
+@function color($token) {
+  @if not map.has-key($colors, $token) {
+    @error "Unknown color token: #{$token}";
+  }
+
+  @return map.get($colors, $token);
+}
