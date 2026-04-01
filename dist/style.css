@@ -483,19 +483,19 @@ img {
   max-width: 376px;
   width: 100%;
 }
-.dentistry__addreses > div {
+.dentistry__address {
   background-color: #f1f3f9;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.dentistry__addreses > div > h5 {
+.dentistry__address > h5 {
   font-size: 15px;
   line-height: 24px;
   color: #868686;
 }
-.dentistry__addreses > div > p {
+.dentistry__address > p {
   font-size: 15px;
   line-height: 24px;
   color: #868686;

@@ -24,22 +24,22 @@
     flex-direction: column;
     max-width: 376px;
     width: 100%;
+  }
 
-    & > div {
-      background-color: #f1f3f9;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+  &__address {
+    background-color: #f1f3f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-      & > h5 {
+    & > h5 {
         @include t.body-text;
         color: c.color("secondary-foreground");
-      }
+    }
 
-      & > p {
+    & > p {
         @include t.body-text-muted;
-      }
     }
   }
 
